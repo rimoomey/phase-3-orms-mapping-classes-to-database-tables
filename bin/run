@@ -3,5 +3,8 @@
 require 'pry'
 require_relative '../config/environment'
 
+Song.create_table
+
+p DB[:conn].execute('PRAGMA table_info(songs)')
+
 binding.pry
-"pls"
